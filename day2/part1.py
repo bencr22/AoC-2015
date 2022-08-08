@@ -5,9 +5,10 @@ with open("day2/input.txt", "r") as file:
         numbers = line.split("x")
 
         values = []
-        values.append( int(numbers[0]) * int(numbers[1] ))
-        values.append( int(numbers[0]) * int(numbers[2] ))
-        values.append( int(numbers[1]) * int(numbers[2] ))
+        for c in range(2):
+            values.append( int(numbers[0]) * int(numbers[1] ))
+            values.append( int(numbers[0]) * int(numbers[2] ))
+            values.append( int(numbers[1]) * int(numbers[2] ))
 
         spare = min(values)
         square_foot += spare + sum(values)
